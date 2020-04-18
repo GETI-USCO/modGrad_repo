@@ -1,0 +1,56 @@
+Módulos:
+
+express 
+connect-flash 
+bcryptjs 
+express-handlebars 
+handlebars  ---->   (npm i -D handlebars@4.5.0)
+express-session 
+method-override 
+mongoose 
+passport 
+passport-local
+dotenv
+nodemon
+npm-check-updates
+morgan
+
+
+Cuando algo no quiera instalar repetir el mismo comando o usar el comando "npm uninstall -g" y 
+luego volver a intentar
+
+Para correr con nodemon usar:
+npm run dev
+
+Para correr normal usar:
+npm start
+
+
+**********Mongo*************
+* db.notes.find()
+* db.notes.find().pretty()
+* show dbs
+* show notes
+
+*************************
+******* Docuemntación************
+jsDoc
+npm install jsdoc
+
+
+La version 4.6 en adelante de handlebars genera problemas para listar los elementos.
+usar npm install handlebars@4.5.3
+
+
+*************************************************************
+**** a tener en cuenta en HTML y Javascript **************
+
+Filter Dropdown Menu
+https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
+
+Filter Table
+https://www.w3schools.com/howto/howto_js_filter_table.asp
+
+
+
+**********************************************************

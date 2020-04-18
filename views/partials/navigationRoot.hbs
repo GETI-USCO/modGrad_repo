@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand"><img src="../img/logoModGrad.png" width="30" height="30"
+                class=" rounded-circle d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand">ModGrad</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <!--   {{#if user}}  -->
+            <ul class="navbar-nav mr-auto">               
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Inicio
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                        <a class="dropdown-item" href="/users/started">Ir a inicio</a>
+                        <div class="dropdown-divider"></div>                                             
+                        <a class="dropdown-item" href="/users/started">Manual del profesor</a>
+                        <a class="dropdown-item" href="/users/started">Manual del estudiante</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/users/started">GTST - Quienes somos.</a>                        
+                        <a target="_blank" class="dropdown-item" href="https://www.usco.edu.co">Universidad Surcolombiana</a>
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usuarios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/users/changePasswdForm">Cambiar contraseña</a>
+                        <div class="dropdown-divider"></div>                      
+                        <a class="dropdown-item" href="/users/signupUserForm">Registrar usuario</a>
+                        <div class="dropdown-divider"></div>                        
+                        <a class="dropdown-item" href="/users/findUserByIDForm">Buscar usuario por identificación</a>
+                        <a class="dropdown-item" href="/users/findUserByEmailForm">Buscar usuario por correo</a>
+                        <a class="dropdown-item" href="/users/seeAllProfesors">Ver todos los profesores</a>                                                    
+                        <a class="dropdown-item" href="/users/seeAllStudent">Ver todos los estudiantes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/users/allUserList">Ver todos los usuarios</a>
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Modalidades
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/users/started">Crear modalidad</a>
+                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/users/started">Buscar modalidad</a>
+                        <div class="dropdown-divider"></div>                        
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Estadísticas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/users/started">Estudiantes graduados</a>
+                        <a class="dropdown-item" href="/users/started">Estudiantes en proceso</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/users/started">Modalidades en proceso</a>
+                        <a class="dropdown-item" href="/users/started">Modalidades en finalizadas</a>                        
+                    </div>
+                </li>                
+            </ul>           
+                <label class="btn btn-outline-dark my-2 my-sm-0 text-white bg-dark font-italic">{{user.name}} ({{user.role}})</label>
+                <a href="/users/logout"><button
+                    class="btn btn-outline-secondary my-2 my-sm-0 text-warning bg-dark font-weight-bold">Salir</button></a>        
+       <!-- {{/if}}     -->   
+        </div>          
+    </div>
+</nav>
+

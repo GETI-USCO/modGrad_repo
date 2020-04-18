@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-5 text-center border-secondary ">
+            <div class="card-header bg-dark">
+                <h1 class="h4 text-white">ModGrad </h1>
+                <h1 class="h6 text-white">Actualizar usuario</h1>
+            </div>
+            <div class="card-body">               
+                <form action="/users/editUser/{{idUserToEdit}}?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">                     
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light" name="name" value="{{userToEdit.name}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light" name="lastname" value="{{userToEdit.lastname}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light" name="sec_lastname"
+                            value="{{userToEdit.sec_lastname}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light" name="identification" value="{{userToEdit.identification}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light" name="email" value="{{userToEdit.email}}">
+                    </div>                                      
+                    <div><label for="role">Tipo de usuario</label>
+                        <select id="role" name="role" value="{{userToEdit.role}}">
+                            <option value="student">Estudiante</option>
+                            <option value="professor">Profesor</option>
+              {{#if isRoot}}<option value="admin">Administrador</option>{{/if}}
+              {{#if isRoot}}<option value="root">Root</option>{{/if}}
+                            </option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary btn-block" type="submit">
+                        Actualizar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

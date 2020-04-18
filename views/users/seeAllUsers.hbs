@@ -1,0 +1,46 @@
+<div> 
+  <hr>
+  <h2> <p class="font-italic inline">ModGrad - Usuarios encontrados!</p></h2>  
+  <hr>
+</div>
+{{#if allUserList}}
+<table class="table table-bordered table-hover overflow-y: hidden">
+  <thead class="thead-dark">
+    <tr>      
+      <th scope="col">Nombres</th>
+      <th scope="col">Primer apellido</th>
+      <th scope="col">Segundo apellido</th>
+      <th scope="col">Id</th>
+      <th scope="col">Correo electrónico</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Modalidad</th>
+      <th scope="col">Editar</th>        
+    </tr>
+  </thead>
+  <tbody>   
+    {{#each allUserList}} 
+    <tr>     
+      <td>{{name}}</td>
+      <td>{{lastname}}</td>
+      <td>{{sec_lastname}}</td>
+      <td>{{identification}}</td>
+      <td>{{email}}</td>
+      <td>{{role}}</td>
+      <td>
+        <form action="/users/updateUser/{{_id}}" method="POST">
+          <button type="=submit" class="btn btn-info btn-block btn-sm">Buscar</button>
+        </form> 
+      </td>   
+      <td>        
+        <a href="/users/editUserForm/{{_id}}"><button class="btn btn-success btn-block btn-sm">Editar</button></a>        
+      </td> 
+    </tr>       
+     {{/each}}     
+  </tbody>
+</table>
+{{else}}
+<br>
+<br>
+<br>
+<h4>No se encontró ningún usuario!!</h4>
+{{/if}}
