@@ -1,0 +1,54 @@
+        <div class="card mt-0 text-center border-secondary ">
+            <div class="card-header bg-dark">                
+                <h1 class="h6 text-white">Nueva modalidad de grado</h1>
+            </div>
+            <div class="card-body">                
+                <form action="/modalities/modalityCreated" method="POST">                    
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light" name="modalityTitle" placeholder="--Titulo de la modalidad--"
+                            value="{{modalityTitle}}" required>                        
+                    </div>
+                    <div class="form-group" >                        
+                        <select class="form-control bg-light" id="modalityType" name="modalityType" value="{{modalityType}}">
+                            <option>---Elija el tipo de modalidad de grado---</option>
+                            <option>Proyecto de grado</option>
+                            <option>Pasantía supervisada</option>
+                            <option>Plan complementario en programa de postgrado</option>
+                            <option>Emprendimiento y fortalecimiento de empresa</option>
+                            <option>Semillero de investigación</option>
+                            <option>Producción académica de alto nivel</option>
+                        </select>
+                    </div>
+                    <div class="form-group">                        
+                        <textarea class="form-control" aria-label="With textarea" name="description" placeholder="--Agregue una breve descripción--"
+                            value="{{description}}" required></textarea>                                               
+                    </div>                                        
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control bg-light" name="student1_ID" placeholder="--Código--"
+                                value="{{student1_ID}}" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control bg-light" name="nameStudent1" placeholder="--Nombres y apellidos--"
+                                value="{{nameStudent1}}" required>                                
+                        </div>                        
+                    </div> 
+                    <div class="row form-group">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control bg-light" name="student2_ID" placeholder="--Código--"
+                                value="{{student2_ID}}">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control bg-light" name="nameStudent2" placeholder="--Nombres y apellidos--"
+                                value="{{nameStudent2}}">                                
+                        </div>                        
+                    </div>                   
+                    <div class="form-group bg-light">                       
+                        <input type="file" class="form-control-file" id="preliminary_draft" required>
+                    </div>                   
+                    <button type="submit" class="btn btn-secondary">
+                        Crear modalidad
+                    </button>                    
+                </form>
+            </div>            
+        </div>    

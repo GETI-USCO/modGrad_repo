@@ -51,6 +51,15 @@ https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
 Filter Table
 https://www.w3schools.com/howto/howto_js_filter_table.asp
 
-
-
 **********************************************************
+
+                    <div class="row form-group">
+                        <div class="col">
+                            <input type="text" class="form-control bg-light" name="name" placeholder="Nombres"
+                                value="{{name}}">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control bg-light" name="name" placeholder="Nombres"
+                                value="{{name}}">                                
+                        </div>                        
+                    </div>  

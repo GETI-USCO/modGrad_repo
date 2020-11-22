@@ -61,13 +61,12 @@ router.get('/users/signUpUserRootForm', SignUpUserRootForm) ///Formulario para a
 
 router.post('/users/signupRoot', signupRoot); ///Agregar root
 
-
 /////////////----Ingreso de usuarios-----///////////////////////
 router.get('/users/signinForm', renderSigInForm);
 
 router.post('/users/signin', signin);
 
 router.get('/users/logout', logout);
-
+////////////////////////////////////////////////////////////////////
 
 module.exports = router;

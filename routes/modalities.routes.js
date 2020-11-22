@@ -2,11 +2,12 @@ const router = require('express').Router();
 
 const {isAuthenticated} = require('../helpers/auth');
 
-const {createModalityForm
-} = require('../controller/modalities.controller');
+const {createModalityForm,
+        modalityCreated
+        } = require('../controller/modalities.controller');
 
-router.get('/createModalityForm', isAuthenticated, createModalityForm);
-
+router.get('/modalities/createModalityForm', isAuthenticated, createModalityForm);
+router.post('/modalities/modalityCreated', isAuthenticated, modalityCreated)
 
 
 
